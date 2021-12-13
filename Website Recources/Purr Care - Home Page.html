@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Purr Care - Home Page </title>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="icon" href="Purr Care Tabs Logo.png">
+	</head>
+
+	<style> /*Nav Bar*/
+		.navbar
+		{
+			background-color: #5c0e2d;
+			margin-bottom: 0%;
+			height: 8%;
+		}
+
+		.navbar-brand
+		{
+			color: #ffa781;
+		}
+
+		.navbar-brand:hover
+		{
+			color: #ffdbcc;
+		}
+
+		.navbar li
+		{
+			background-color: #5c0e2d;
+			margin-bottom: 0%;
+			height: 8%;
+		}
+
+		.navbar li:hover
+		{
+			background-color: #8a1544;
+			margin-bottom: 0%;
+			height: 8%;
+		}
+
+		.active
+		{
+			background-color: #5c0e2d;
+			font-weight: bold;
+			color: #ffdbcc;
+			text-decoration: underline;
+		}
+
+		.active:hover
+		{
+			background-color: #8a1544;
+			font-weight: bold;
+			color: #ffa781;
+			text-decoration: underline;
+		}
+
+		.inactive
+		{
+			background-color: #5c0e2d;
+			font-weight: normal;
+			color: #ffdbcc;
+		}
+
+		.dropdown-toggle
+		{
+			background-color: #5c0e2d;
+			color: white;
+			border: none;
+        }
+
+		.dropdown-toggle:hover
+		{
+			background-color: #ca2064;
+			color: black;
+			border: none;
+        }
+
+        .dropdown-toggle a
+		{
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+        }
+
+		.dropdown-menu
+		{
+			background-color: #ffa781;
+			color: black;
+			border: none;
+		}
+
+		.dropdown-menu a
+		{
+			background-color: #ffa781;
+			color: black;
+			border: none;
+		}
+
+		.dropdown-menu a:hover
+		{
+			background-color: #ffdbcc;
+			color: black;
+			border: none;
+		}
+	</style>
+	
+	<style> /*Body*/
+		body
+		{
+			background-color: #ffa781;
+		}
+
+		#bodyContainer
+		{
+			width:100%;
+			padding: 2%;
+			background: #ffdbcc;
+			background-image: url("Dog with Food Bowl.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			font-display: inline;
+		}
+
+		.bodyContainer-textbox
+		{
+			width: 40%;
+			padding: 5%;
+			margin-left: 60%;
+			margin-right: auto;
+			background-color: #ffa781;
+			border-style: groove;
+			border-color: #ca2064;
+			border-width: thick;
+			color: #ca2064;
+		}
+
+		.bodyContainer-textbox-h1
+		{
+			font-weight: normal;
+			font-style: italic;
+			color: #8a1544;
+		}
+
+		.bodyContainer-textbox--h1
+		{
+			font-weight: normal;
+			font-size: x-large;
+			font-style: italic;
+			text-indent: 45%;
+			color: #8a1544;
+		}
+
+		.bodyContainer-p
+		{
+			font-weight: normal;
+			font-style: italic;
+			color: #5c0e2d;
+		}
+
+		.hr
+		{
+			width: 100%;
+			border-width: 2%;
+			background-color:black;
+		}
+
+		.container
+		{
+			width: 70%;
+			padding: 5%;
+			margin-left: 15%;
+			margin-right: auto;
+			background-color: #f5bda5;
+		}
+	</style>
+
+	<style> /*Scroll Bar*/
+		/* width */
+		::-webkit-scrollbar
+		{
+			background-color: #fffefe;
+			width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track
+		{
+			box-shadow: inset 0 0 5px #fffefe; 
+			border-radius: 10px;
+		}
+		
+		/* Handle */
+		::-webkit-scrollbar-thumb
+		{
+			background: #bfbfbf;
+			border-radius: 10px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover
+		{
+			background: #666666; 
+		}
+	</style>
+	
+	<style> /*Side Scrooling Containers*/
+		.side-scroll
+		{
+			width: 75%;
+			padding: 1%;
+			border-radius: 8px;
+			white-space: nowrap;
+			position: relative;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}
+
+		.item-container
+		{
+			width: 30%;
+			height: 25%;
+			margin-top: 2%;
+			margin-bottom: 2%;
+			margin-left: 5%;
+			margin-right: 5%;
+			padding: auto;
+			margin-bottom: 5%;
+			background-color: gray;
+			box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			float: none;
+			display: inline-block;
+		}
+		
+		.item-text
+		{
+			width: 100%;
+			height: 25%;
+			background-color: #ebebeb;
+			font-weight: normal;
+			color: #2b2b2b;
+			padding: 10%;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.item-text:hover
+		{
+			background-color: #ffffff;
+			font-weight: bold;
+			color: #000000;
+		}
+
+		.item-img
+		{
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	</style>
+
+	<style>
+		.bg
+		{
+			background-color: #5c0e2d;
+		}
+
+		.form
+		{
+			margin-top: 2.8%;
+		}
+
+		.error
+		{
+			background: #F2DEDE;
+			color: #A94442;
+			padding: 10px;
+			width: 95%;
+			border-radius: 5px;
+		}
+        .logo
+		{
+            width: 5%;
+            height: 5%;
+            margin-right: -1100%;
+        }
+
+		.dropdown-toggle
+		{
+			background-color: #5c0e2d;
+			color: white;
+			border: none;
+        }
+
+		.dropdown-toggle:hover
+		{
+			background-color: #ca2064;
+			color: black;
+			border: none;
+        }
+
+        .dropdown-toggle a
+		{
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+        }
+
+		.dropdown-menu
+		{
+			background-color: #ffa781;
+			color: black;
+			border: none;
+		}
+
+		.dropdown-menu a
+		{
+			background-color: #ffa781;
+			color: black;
+			border: none;
+		}
+
+		.dropdown-menu a:hover
+		{
+			background-color: #ffdbcc;
+			color: black;
+			border: none;
+		}
+	</style>
+
+	<style> /*Buttons*/
+		#loginBtn{
+		background-color: #ffa781;
+        border-color: #5c0e2d;
+		color: black;
+		}
+
+		#loginBtn:hover{
+		background-color:#5c0e2d;
+		border-color: #8a1544;
+        color: white;
+		}
+
+		.btn{
+		background-color:#8a1544;
+		color: #ffdbcc;
+		}
+
+		.btn:hover{
+		background-color: #d61261;
+		color: #ffdbcc;
+		border-color: #000000;
+		}
+	</style>
+
+	<style> /*Footer*/
+		.site-footer
+        {
+        background-color:#26272b;
+        padding:45px 0 20px;
+        font-size:15px;
+        margin-top: 10%;
+        line-height:24px;
+        color:#737373;
+        }
+        .site-footer hr
+        {
+        border-top-color:#bbb;
+        opacity:0.5
+        }
+        .site-footer hr.small
+        {
+        margin:20px 0
+        }
+        .site-footer h6
+        {
+        color:#fff;
+        font-size:16px;
+        text-transform:uppercase;
+        margin-top:5px;
+        letter-spacing:2px
+        }
+        .site-footer a
+        {
+        color:#737373;
+        }
+        .site-footer a:hover
+        {
+        color:#3366cc;
+        text-decoration:none;
+        }
+        .footer-links
+        {
+        padding-left:0;
+        list-style:none
+        }
+        .footer-links li
+        {
+        display:block
+        }
+        .footer-links a
+        {
+        color:#737373
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+        color:#3366cc;
+        text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+        display:inline-block
+        }
+	</style>
+
+	<body>
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="#">Purr - Care</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a class="active" href="#">Home</a></li>
+						<li>
+							<form class="form form-inline my-3 my-lg-0">
+								<input class="form-control w-75 mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+								<button class="btn my-2 my-sm-3 button-color" type="submit">Search</button>
+							</form>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Store<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Foods</a></li>
+								<li><a href="#">Toys</a></li>
+								<li><a href="#">Accessories</a></li>
+								<li><a href="#">Housing Materials</a></li>
+							</ul>
+						</li>
+						<li><a class="inactive" href="#">Page 2</a></li>
+						<li><a class="inactive" href="#">Page 3</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="inactive" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a class="inactive" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	
+		<div id ="bodyContainer">
+			<div class="container-fluid position-relative overflow-hidden" id="bg">
+				<div class="bodyContainer-textbox">
+					<h1 class="bodyContainer-textbox-h1">"Your pets deserves more care."</h1>
+					<h1 class="bodyContainer-textbox--h1">- Some guy, probably</h1>
+					<br><br><br>
+					<p class="lead font-weight-normal">If you are a new user sign up now to get the best care for your Pets. Cause' we know you love your Pet more that we do.</p>
+					<a id="loginBtn" class="btn" href="Purr care - Login.html" role="button">Proceed</a>
+				</div>
+				<div class="product-device box-shadow d-none d-md-block"></div>
+				<div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+			</div>
+		</div>
+		<div class="container">
+			<hr class="hr">
+			<div class="row">
+				<div class="col-md-4">
+					<h2>Announcement</h2>
+					<p style="text-align: justify;">
+						
+					</p>
+					<p><a class="btn" href="#" role="button">View details »</a></p>
+				</div>
+				<div class="col-md-4">
+					<h2>News</h2>
+					<p style="text-align: justify;"></p>
+					<p><a class="btn" href="#" role="button">View details »</a></p>
+				</div>
+				<div class="col-md-4">
+					<h2>Updates</h2>
+					<p style="text-align: justify;"></p>
+					<p><a class="btn" href="#" role="button">View details »</a></p>
+				</div>
+			</div>
+			<hr class="hr">
+
+			<br>
+
+			<hr class="hr">
+			<h2><center>Shop by Pets</center></h2>
+			<center>
+			<div class="side-scroll">
+				<div class="item-container">
+					<img class="item-img" src="" alt="Dogs">
+					<div class="item-text">
+						<a style="color: black;" href="#">Dogs</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" style="width: 125%;" alt="Cats">
+					<div class="item-text">
+						<a style="color: black;" href="#">Cats</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" alt="Birds">
+					<div class="item-text">
+						<a style="color: black;" href="#">Birds</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" alt="Hamsters">
+					<div class="item-text">
+						<a style="color: black;" href="#">Hamsters</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" alt="Rabbits">
+					<div class="item-text">
+						<a style="color: black;" href="#">Rabbits</a>
+					</div>
+				</div>
+			</div>
+			</center>
+			<hr class="hr">
+			
+			<br>
+
+			<hr class="hr">
+			<h2><center>Shop by Items</center></h2>
+			<center>
+			<div class="side-scroll">
+				<div class="item-container">
+					<img class="item-img" src="" alt="Foods">
+					<div class="item-text">
+						<a style="color: black;" href="#">Foods</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" alt="Toys">
+					<div class="item-text">
+						<a style="color: black;" href="#">Toys</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" alt="Snacks">
+					<div class="item-text">
+						<a style="color: black;" href="#">Snacks</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" alt="Accessories">
+					<div class="item-text">
+						<a style="color: black;" href="#">Accessories</a>
+					</div>
+				</div>
+
+				<div class="item-container">
+					<img class="item-img" src="" alt="Habitat Building Materials">
+					<div class="item-text">
+						<a style="color: black;" href="#">Habitat Building Materials</a>
+					</div>
+				</div>
+			</div>
+			</center>
+			<hr class="hr">
+		</div>
+
+		<div class="site-footer">
+            <center><p>© Paws Stuff 2021-2022</p></center>
+        </div>
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html>
